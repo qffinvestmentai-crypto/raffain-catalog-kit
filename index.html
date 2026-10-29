@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#153c36">
+<meta name="description" content="رفّين: عدّة رقمية لتنظيم كتالوج متجرك بالعربية والإنجليزية. قوالب وأمثلة وجداول جاهزة للتعبئة، بثلاث باقات ودفعة واحدة دون اشتراك.">
+<title>رفّين — عدّة كتالوجك بلغتين</title>
+<style>
+:root{--paper:#f8f7f2;--ink:#19352f;--muted:#596b64;--green:#153c36;--lime:#ddecaa;--line:#dce3da;--white:#fff;--radius:22px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:1.85}
+a{color:inherit;text-underline-offset:5px}
+a:focus-visible,summary:focus-visible{outline:3px solid #9b6b12;outline-offset:6px}
+.wrap{width:min(1120px,calc(100% - 36px));margin-inline:auto}
+header{padding:22px 0;border-bottom:1px solid var(--line)}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:26px}
+.mark{width:38px;height:38px;background:var(--green);border-radius:11px;position:relative;display:inline-block}
+.mark:before,.mark:after{content:"";position:absolute;height:4px;background:var(--lime);right:8px;left:8px;border-radius:3px}
+.mark:before{top:12px}.mark:after{top:23px}
+.header-note{font-size:12px;color:var(--muted)}
+.hero{padding:54px 0 40px;display:grid;gap:32px;align-items:center}
+.eyebrow{font-size:13px;font-weight:bold;color:var(--green);display:flex;align-items:center;gap:9px;margin:0 0 16px}
+.dot{width:8px;height:8px;border-radius:50%;background:#537b36;display:inline-block}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(32px,5vw,55px);line-height:1.35;letter-spacing:-1px;margin-bottom:22px}
+h1 span{color:#557637}
+h2{font-size:clamp(25px,3vw,35px);line-height:1.5;margin-bottom:12px}
+h3{font-size:20px;line-height:1.5;margin-bottom:10px}
+p{margin-bottom:16px}
+.lead{font-size:18px;color:var(--muted);max-width:640px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0}
+.tag{border:1px solid var(--line);border-radius:30px;padding:5px 12px;font-size:12px;background:#fff9}
+.action-note{background:var(--green);color:white;padding:17px 20px;border-radius:14px;font-weight:bold}
+.small{font-size:13px;color:var(--muted)}
+.hero-small{margin:10px 0 0}
+.preview{background:#e7eddf;border-radius:28px;padding:24px 18px;position:relative;overflow:hidden}
+.preview:before{content:"";width:200px;height:200px;border:35px solid #d3dfc5;border-radius:50%;position:absolute;left:-80px;top:-65px}
+.preview-sheet{position:relative;background:white;padding:24px;border-radius:15px;box-shadow:0 16px 45px #18382c12}
+.sheet-head{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:15px;font-size:12px;color:var(--muted)}
+.sheet-title{font-size:23px;margin:20px 0 5px;font-weight:bold}
+.field{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #edf0ea;font-size:13px}
+.field span:last-child{color:var(--muted)}
+.description-box{background:var(--paper);padding:15px;border-radius:10px;margin-top:18px;font-size:13px}
+.description-box p{margin:0 0 6px}.description-box p:last-child{margin:0;color:var(--muted)}
+.preview-caption{position:relative;text-align:center;font-size:12px;color:var(--muted);margin:15px 0 0}
+section{padding:43px 0}
+.section-intro{color:var(--muted);max-width:740px;margin-bottom:26px}
+.grid{display:grid;gap:16px}
+.panel{padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:white}
+.panel p:last-child{margin-bottom:0}
+.problem{background:#edece3;border-color:transparent}
+.solution{background:var(--green);border-color:transparent;color:white}
+.solution p{color:#e0e8dc}
+.kicker{font-size:12px;font-weight:bold;margin-bottom:14px;display:block;color:var(--muted)}
+.solution .kicker{color:var(--lime)}
+.feature-icon{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#eef2e7;margin-bottom:18px;font-size:20px}
+.feature p{color:var(--muted);font-size:14px}
+.steps{counter-reset:steps;list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.steps li{counter-increment:steps;display:flex;gap:13px;align-items:flex-start;font-size:14px}
+.steps li:before{content:counter(steps);background:var(--green);color:var(--lime);min-width:31px;height:31px;border-radius:50%;display:grid;place-items:center;font-weight:bold}
+.boundary{margin-top:24px;border-inline-start:4px solid #a5b576;padding:17px 20px;background:#eef1e7;border-radius:9px;font-size:14px}
+.pricing{border-top:1px solid var(--line);margin-top:12px}
+.tier{padding:26px 23px;background:white;border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;position:relative}
+.tier.featured{border:2px solid var(--green);background:#f4f7ed}
+.tier-label{font-size:12px;font-weight:bold;color:#526c37;margin-bottom:16px;min-height:23px}
+.tier-desc{font-size:14px;color:var(--muted);min-height:52px}
+.price{display:flex;align-items:baseline;gap:8px;margin:5px 0 0;font-variant-numeric:tabular-nums}
+.price strong{font-size:40px;letter-spacing:-1px;line-height:1.5}.price span{font-size:14px}
+.payment-note{font-size:12px;color:var(--muted);padding-bottom:18px;border-bottom:1px solid var(--line)}
+.tier ul{padding-inline-start:20px;margin:0 0 22px;font-size:14px}
+.tier li{margin-bottom:11px}.tier li::marker{color:#75964b}
+.tier-foot{margin-top:auto;padding-top:15px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.pricing-cta{margin-top:22px;text-align:center}.pricing-cta p{margin:10px 0 0}
+.faq{max-width:860px;margin-inline:auto}
+details{border-bottom:1px solid var(--line);padding:19px 0}
+summary{cursor:pointer;font-size:16px;font-weight:bold;padding-inline-end:12px}
+details[open] summary{margin-bottom:12px}
+details p{font-size:14px;color:var(--muted);margin:0;padding-inline-start:18px}
+.contact{background:var(--green);color:white;border-radius:var(--radius);padding:30px;display:grid;gap:18px;align-items:center}
+.contact h2{font-size:26px}.contact p{color:#dce6dc;margin:0;font-size:14px}
+.email{display:inline-block;color:var(--lime);font-size:clamp(14px,3.8vw,18px);overflow-wrap:anywhere}
+footer{padding:22px 0 32px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer p{margin:0}.next-step{margin-top:14px;color:var(--ink);font-weight:bold}
+@media(min-width:720px){.hero{grid-template-columns:1.2fr 1fr;gap:48px;padding:72px 0 52px}.two{grid-template-columns:1fr 1fr}.features{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(3,1fr)}.contact{grid-template-columns:1fr auto}.header-note{font-size:14px}}
+@media(min-width:960px){.tiers{grid-template-columns:repeat(3,1fr)}.preview{padding:32px}.tier.featured{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:no-preference){summary,a{transition:color .15s ease}a:hover{color:#6c8c3c}}
+@media print{body{background:white}.wrap{width:100%}.hero{padding-top:25px}.tier,.panel,details{break-inside:avoid}.preview-sheet{box-shadow:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap header-row">
+<div class="brand"><span class="mark" aria-hidden="true"></span><span>رفّين</span></div>
+<span class="header-note">عدّة كتالوجك بلغتين</span>
+</div>
+</header>
+<main class="wrap">
+<section class="hero" aria-labelledby="hero-title">
+<div>
+<p class="eyebrow"><span class="dot" aria-hidden="true"></span>منتج رقمي جاهز للشراء الآن</p>
+<h1 id="hero-title">منتجاتك مرتّبة.<br><span>بالعربية والإنجليزية.</span><br>لا تبدأ من صفحة فارغة.</h1>
+<p class="lead">رتّب منتجات متجرك باستخدام قوالب وأمثلة جاهزة للتعبئة، واجمع الأسماء والمواصفات والأسعار في كتالوج واضح يمكنك تحديثه بنفسك.</p>
+<div class="tags"><span class="tag">للهدايا والأدوات المنزلية والإكسسوارات</span><span class="tag">لمتاجر قطر</span><span class="tag">دفعة واحدة · دون اشتراك</span></div>
+<div class="action-note">اختر باقتك ثم ادفع عبر الأزرار في الأسفل</div>
+<p class="small hero-small">عدّة إعداد ذاتية الاستخدام، وليست خدمة كتابة أو ترجمة أو تصميم مخصص.</p>
+</div>
+<div class="preview" aria-label="تصوّر توضيحي لحقول بطاقة المنتج">
+<div class="preview-sheet">
+<div class="sheet-head"><strong>رفّين / بطاقة منتج</strong><span dir="ltr" lang="en">AR + EN</span></div>
+<p class="sheet-title">[اسم منتجك هنا]</p>
+<p class="small" dir="ltr" lang="en">[Your product name]</p>
+<div class="field"><strong>رمز المنتج</strong><span dir="ltr" lang="en">Product code</span></div>
+<div class="field"><strong>الخامة · المقاس · اللون</strong><span dir="ltr" lang="en">Material · Size · Color</span></div>
+<div class="field"><strong>السعر بالريال القطري</strong><span dir="ltr" lang="en">Price in QAR</span></div>
+<div class="description-box"><p>وصف عربي: [أضف المعلومات الصحيحة]</p><p dir="ltr" lang="en">English description: [Add verified details]</p></div>
+</div>
+<p class="preview-caption">تصوّر توضيحي للحقول، وليس تصميمًا نهائيًا ضمن الملفات.</p>
+</div>
+</section>
+
+<section aria-label="المشكلة والحل">
+<div class="grid two">
+<article class="panel problem">
+<span class="kicker">المشكلة</span>
+<h2>معلومات متجرك موجودة…<br>لكنها متفرّقة.</h2>
+<p>صور في المحادثات، وأسعار في المنشورات، ومواصفات يسأل عنها العملاء كل مرة. وعندما تريد جمعها في كتالوج، تبدأ الأسئلة: ماذا أكتب؟ كيف أرتّب البطاقات؟ وكيف أعرض اللغتين؟</p>
+</article>
+<article class="panel solution">
+<span class="kicker">الحل</span>
+<h2>هيكل واضح تعبّئه.<br>وتعود إليه عند التحديث.</h2>
+<p>«رفّين» يجمع قوالب الأوصاف ثنائية اللغة، وجدول المنتجات، وهيكل الكتالوج في عدّة واحدة. انسخ النص إلى محرّر مستندات، أدخل بياناتك وصورك، ثم نسّق الصفحات وصدّرها بصيغة PDF.</p>
+</article>
+</div>
+</section>
+
+<section aria-labelledby="features-title">
+<span class="kicker">مزايا المنتج</span>
+<h2 id="features-title">بدل الارتجال، نقطة بداية منظّمة.</h2>
+<p class="section-intro">القيمة في ترتيب العمل: حقول موحّدة، وأمثلة للاستئناس، وقوائم مراجعة تساعدك على معرفة ما يجب التحقق منه قبل المشاركة.</p>
+<div class="grid features">
+<article class="panel feature"><span class="feature-icon" aria-hidden="true">↔</span><h3>لغتان في إطار واحد</h3><p>قوالب عربية وإنجليزية، مع وصف مستهدف من 30–50 كلمة لكل لغة، لتعبئة معلومات المنتج ضمن بنية متسقة.</p></article>
+<article class="panel feature"><span class="feature-icon" aria-hidden="true">▦</span><h3>بيانات يسهل الرجوع إليها</h3><p>جدول CSV مستقل لتنظيم المنتجات. تختلف الحقول وعدد الصفوف بحسب الباقة، ويمكنك تحديث البيانات كلما تغيّرت.</p></article>
+<article class="panel feature"><span class="feature-icon" aria-hidden="true">✓</span><h3>مراجعة قبل المشاركة</h3><p>تعليمات لإدراج الصور والتصدير، وقائمة تحقق تساعدك على مراجعة المعلومات واللغة وفق تفاصيل باقتك.</p></article>
+</div>
+<ol class="steps">
+<li><span><strong>اجمع المعلومات</strong><br>جهّز الصور المصرّح بها والمواصفات والأسعار الصحيحة.</span></li>
+<li><span><strong>عبّئ القوالب</strong><br>استعن بالأمثلة، واكتب تفاصيل منتجاتك الفعلية.</span></li>
+<li><span><strong>راجع وصدّر</strong><br>دقّق اللغتين والأسعار، واختبر الملف على الهاتف ثم شاركه.</span></li>
+</ol>
+<div class="boundary"><strong>وضوح من البداية:</strong> الأمثلة لمنتجات افتراضية وليست مواصفات موثّقة لمنتجاتك. لا تشمل الباقات تصويرًا أو رفع منتجات أو مراجعة بشرية مخصصة أو إعداد كتالوج متجرك بالنيابة عنك.</div>
+</section>
+
+<section class="pricing" aria-labelledby="tiers-title">
+<span class="kicker">ثلاث باقات · كل باقة مستقلة</span>
+<h2 id="tiers-title">اختر حجم البداية الذي يناسب تشكيلتك.</h2>
+<p class="section-intro">جميع الأسعار بالريال القطري، لكل باقة دفعة واحدة دون اشتراك. لا تحتاج إلى شراء باقة أصغر للاستفادة من الباقة الأكبر.</p>
+<div class="grid tiers">
+<article class="tier">
+<div class="tier-label">لبداية صغيرة وواضحة</div>
+<h3>بداية مرتبة</h3>
+<p class="tier-desc">هيكل من 5 بطاقات لتبدأ بمجموعة محدودة من المنتجات.</p>
+<div class="price"><strong dir="ltr">69.16</strong><span>ر.ق</span></div>
+<p class="payment-note">دفعة واحدة</p>
+<ul>
+<li>هيكل كتالوج من <strong>5 بطاقات</strong>، مع غلاف وفهرس مختصر وصفحة بيانات المتجر.</li>
+<li>قالب بطاقة ثنائي اللغة للاسم والخامة والمقاس واللون والسعر ورمز المنتج والوصف.</li>
+<li><strong>5 أمثلة مكتملة</strong> بالعربية والإنجليزية لهدايا افتراضية.</li>
+<li>جدول CSV من <strong>5 صفوف</strong> جاهزة للتعبئة، بعناوين حقول عربية وإنجليزية.</li>
+<li>تعليمات إدراج الصور وتصدير PDF، وقائمة تحقق من <strong>10 نقاط</strong>.</li>
+</ul>
+<div class="tier-foot">ملف TXT + ملف CSV · ترخيص استخدام وتعديل لمتجر واحد، دون إعادة بيع القوالب أو توزيع ملفاتها الأصلية.</div>
+</article>
+<article class="tier featured">
+<div class="tier-label">لمنتجات متنوّعة وردود منظّمة</div>
+<h3>عرض متكامل</h3>
+<p class="tier-desc">هيكل من 10 بطاقات، مع صيغ تساعدك في إعداد ردودك للعملاء.</p>
+<div class="price"><strong dir="ltr">127.40</strong><span>ر.ق</span></div>
+<p class="payment-note">دفعة واحدة</p>
+<ul>
+<li>هيكل كتالوج من <strong>10 بطاقات</strong>، مع غلاف وفهرس وصفحة بيانات المتجر.</li>
+<li><strong>10 قوالب أوصاف</strong> ثنائية اللغة للهدايا والأدوات المنزلية والإكسسوارات.</li>
+<li><strong>10 أمثلة مكتملة</strong> لمنتجات افتراضية، منفصلة عن بطاقات التعبئة.</li>
+<li>جدول CSV من <strong>10 صفوف</strong> يشمل البيانات الأساسية ورابط الصورة وحالة مراجعة المعلومات.</li>
+<li><strong>12 صيغة رد</strong> بالعربية والإنجليزية لأسئلة السعر والمقاس والخامة والتوفر.</li>
+<li>تعليمات التجهيز والتصدير، وقائمة تحقق من <strong>15 نقطة</strong> للمعلومات واللغة والعرض على الهاتف.</li>
+</ul>
+<div class="tier-foot">ملف TXT + ملف CSV · ترخيص استخدام وتعديل لمتجر واحد، دون إعادة بيع القوالب أو توزيع ملفاتها الأصلية.</div>
+</article>
+<article class="tier">
+<div class="tier-label">لتشكيلة أكبر وتحديثات أوضح</div>
+<h3>تشكيلة منظمة</h3>
+<p class="tier-desc">هيكل من 20 بطاقة موزّعة على 4 أقسام قابلة لإعادة التسمية.</p>
+<div class="price"><strong dir="ltr">200.20</strong><span>ر.ق</span></div>
+<p class="payment-note">دفعة واحدة</p>
+<ul>
+<li>هيكل كتالوج من <strong>20 بطاقة</strong>، مع غلاف وفهرس وصفحة بيانات المتجر.</li>
+<li><strong>20 قالب وصف</strong> ثنائي اللغة و<strong>20 مثالًا مكتملًا</strong> لمنتجات افتراضية، منفصلة عن بيانات متجرك.</li>
+<li>جدول CSV من <strong>20 صفًا</strong> يشمل رمز المنتج والقسم والبيانات الأساسية ورابط الصورة وتاريخ تحديث السعر وحالة المراجعة.</li>
+<li><strong>20 صيغة رد</strong> و<strong>6 قوالب رسائل</strong> ثنائية اللغة لإرسال الكتالوج وتحديثاته؛ ترسلها بنفسك.</li>
+<li>دليل مصطلحات من <strong>60 مدخلًا</strong> عربيًا وإنجليزيًا للخامات والمقاسات والألوان وحقول المنتجات، دون ادعاءات جودة أو سلامة.</li>
+<li>تعليمات التجهيز والتصدير، وقائمة تحقق من <strong>20 نقطة</strong>، وسجل لتوثيق التحديثات.</li>
+</ul>
+<div class="tier-foot">ملف TXT + ملف CSV · ترخيص استخدام وتعديل لمتجر واحد، دون إعادة بيع القوالب أو توزيع ملفاتها الأصلية.</div>
+</article>
+</div>
+<div class="pricing-cta"><div class="action-note">اختر باقتك ثم ادفع عبر الأزرار في الأسفل</div><p class="small">اختر بحسب حجم الهيكل والأدوات التي تحتاجها، وليس على أساس وعد بنتائج تجارية.</p></div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+<span class="kicker">قبل اختيار باقتك</span>
+<h2 id="faq-title">الأسئلة الشائعة</h2>
+<details><summary>هل هذا كتالوج مصمّم بصور متجري وأوصاف منتجاتي؟</summary><p>لا. هذه عدّة ذاتية الاستخدام تضم قوالب نصية وأمثلة وجدولًا. إدخال الصور والبيانات، وكتابة الأوصاف النهائية والتحقق منها، وتنسيق الصفحات والتصدير مسؤوليتك. التخصيص بالنيابة عنك غير مشمول.</p></details>
+<details><summary>لماذا أشتري العدّة بدل استخدام أداة ذكاء اصطناعي مجانية؟</summary><p>القيمة في التنظيم الجاهز: حقول موحّدة، وأمثلة ثنائية اللغة، وجدول قابل لإعادة الاستخدام، وقوائم مراجعة. يمكنك الاستعانة بأداة مجانية أيضًا؛ العدّة لا تستبدل التحقق من الحقائق أو مراجعة اللغة.</p></details>
+<details><summary>ما صيغ الملفات؟ وهل أحتاج إلى برامج مدفوعة؟</summary><p>لكل باقة ملف نصي بصيغة TXT وملف جدول بصيغة CSV. يمكنك استخدام محرّر مستندات ومحرّر جداول مجانيين يدعمان هذه الصيغ. لا تتضمن الملفات صورًا أو خطوطًا مدفوعة أو تصميم PDF نهائيًا. إعداد الصفحات أسهل على الكمبيوتر، ويجب اختبار وضوح ملف PDF على الهاتف بعد تصديره.</p></details>
+<details><summary>هل النصوص ترجمة معتمدة أو مراجعة بشريًا بشكل مستقل؟</summary><p>لا. المحتوى مُعدّ بمساعدة الذكاء الاصطناعي، ولا يشمل ترجمة معتمدة أو مراجعة بشرية مستقلة. تحقّق من الأسماء والمواصفات والأسعار والادعاءات قبل النشر. لا تستخدم الأمثلة لإثبات خامة أو بلد منشأ أو ميزة غير موثّقة.</p></details>
+<details><summary>هل يمكنني إضافة منتجات أكثر من عدد بطاقات الباقة؟</summary><p>نعم، يمكنك تعديل القوالب وتكرار بطاقاتها لمنتجات المتجر المرخّص له. الأعداد المذكورة توضّح حجم الهيكل والقوالب والأمثلة المرفقة بكل باقة، وليست حدًا لعدد منتجات متجرك.</p></details>
+<details><summary>هل أحتاج إلى شراء الباقات بالترتيب أو دفع اشتراك؟</summary><p>لا. كل باقة مستقلة، وسعرها دفعة واحدة دون اشتراك: بداية مرتبة 69.16 ر.ق، عرض متكامل 127.40 ر.ق، وتشكيلة منظمة 200.20 ر.ق.</p></details>
+<details><summary>هل يضمن المنتج زيادة المبيعات أو تقليل الاستفسارات؟</summary><p>لا توجد مبيعات أو نتائج مضمونة، ولا وعد بنسبة محددة لتقليل الاستفسارات. المنتج يوفّر أدوات تنظيم وكتابة؛ وتعتمد فائدة الكتالوج على صحة بياناتك وجودة إعدادك واستخدامك له.</p></details>
+<details><summary>هل يمكن استخدام العدّة لأكثر من متجر أو إعادة بيعها؟</summary><p>الترخيص لمتجر واحد. يجوز تعديل القوالب ومشاركة الكتالوج الناتج مع عملاء متجرك، لكن لا يجوز إعادة بيع العدّة أو توزيع ملفاتها الأصلية.</p></details>
+</section>
+
+<section aria-labelledby="contact-title">
+<div class="contact">
+<div><h2 id="contact-title">للتواصل</h2><p>لديك سؤال عن محتوى العدّة أو الفرق بين الباقات؟ راسلنا قبل اختيارك.</p></div>
+<a class="email" href="mailto:qff.investment@gmail.com" dir="ltr">qff.investment@gmail.com</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p>رفّين — عدّة كتالوجك بلغتين. تنظيم جاهز، وبيانات صحيحة تضيفها أنت.</p>
+<p class="next-step">⚡ خطوتك الرابحة التالية: اختر اليوم الباقة التي يناسب هيكلها عدد المنتجات التي تريد البدء بها.</p>
+</div>
+</footer>
+<!-- mared:legal:start --><section dir="rtl" lang="ar" style="max-width:760px;margin:32px auto;padding:20px 16px;border-top:1px solid rgba(0,0,0,.12);font-family:system-ui,sans-serif;line-height:1.8">
+<h2 style="font-size:20px">ما ستحصل عليه</h2><p>رفّين — عدّة كتالوجك بلغتين — صور في المحادثات، وأسعار في المنشورات، ومواصفات يسأل عنها العملاء كل مرة؟ «رفّين» يساعدك على جمعها في صيغة واحدة واضحة.
+
+منتج رقمي ذاتي الاستخدام لمتاجر الهدايا والأدوات المنزلية والإكسسوارات في قطر، يضم قوالب أوصاف ثنائية اللغة، وجدول منتجات، وهيكل كتالوج يمكنك نسخه إلى Word أو Google Docs وتصديره إلى PDF.
+
+لإتاحة تسليم ملفات جاهزة دون انتظار تنفيذ مخصص، فهذا العرض يبيع عدّة إعداد الكتالوج، وليس خدمة كتابة أو ترجمة أو تصميم كتالوج متجرك بالنيابة عنك. الأمثلة تعليمية لمنتجات افتراضية، وليست أوصافًا موثقة لمنتجات العميل.
+
+طريقة الاستخدام: ١. اجمع الصور المصرح بها والمعلومات الصحيحة. ٢. عبّئ القوالب واستعن بالأمثلة. ٣. راجع اللغتين والأسعار.</p>
+<h3>الأسعار النهائية والباقات</h3><ul><li style="margin:8px 0"><b>بداية مرتبة</b>: <b>$19</b> <small style="opacity:.75">(≈ ٦٩ ر.ق تقريباً)</small> — <a href="https://paypal.me/MMS71017/19USD" target="_blank" rel="noopener" data-mared-buy="19" style="font-weight:700">اشترِ هذه الباقة</a><br><span style="font-size:13px">تشمل: ملف نصي مستقل يضم هيكل كتالوج من 5 بطاقات منتجات، مع غلاف وفهرس مختصر وصفحة بيانات المتجر.، 5 أمثلة مكتملة بالعربية والإنجليزية لمنتجات هدايا افتراضية، مع تنبيه واضح إلى أنها أمثلة وليست مواصفات فعلية.، ملف CSV مستقل من 5 صفوف جاهزة للتعبئة، بعناوين حقول عربية وإنجليزية.، تعليمات إدراج الصور وتصدير PDF، وقائمة تحقق من 10 نقاط قبل المشاركة.، ترخيص استخدام وتعديل لمتجر واحد، دون إعادة بيع القوالب أو توزيع ملفاتها الأصلية.</span></li><li style="margin:8px 0"><b>عرض متكامل</b>: <b>$35</b> <small style="opacity:.75">(≈ ١٢٧ ر.ق تقريباً)</small> — <a href="https://paypal.me/MMS71017/35USD" target="_blank" rel="noopener" data-mared-buy="35" style="font-weight:700">اشترِ هذه الباقة</a><br><span style="font-size:13px">تشمل: ملف نصي مستقل يضم هيكل كتالوج من 10 بطاقات منتجات، مع غلاف وفهرس وصفحة بيانات المتجر.، 10 قوالب أوصاف عربية وإنجليزية موزعة على الهدايا والأدوات المنزلية والإكسسوارات، بوصف مستهدف من 30–50 كلمة لكل لغة.، 10 أمثلة مكتملة بالعربية والإنجليزية لمنتجات افتراضية، منفصلة بوضوح عن بطاقات التعبئة.، ملف CSV مستقل من 10 صفوف، يشمل البيانات الأساسية ورابط الصورة وحالة مراجعة المعلومات.، تعليمات تجهيز الكتالوج وتصديره، وقائمة تحقق من 15 نقطة للمعلومات واللغة والعرض على الهاتف.، ترخيص استخدام وتعديل لمتجر واحد، دون الحاجة إلى شراء باقة أخرى، ودون حق إعادة بيع القوالب.</span></li><li style="margin:8px 0"><b>تشكيلة منظمة</b>: <b>$55</b> <small style="opacity:.75">(≈ ٢٠٠ ر.ق تقريباً)</small> — <a href="https://paypal.me/MMS71017/55USD" target="_blank" rel="noopener" data-mared-buy="55" style="font-weight:700">اشترِ هذه الباقة</a><br><span style="font-size:13px">تشمل: ملف نصي مستقل يضم هيكل كتالوج من 20 بطاقة منتجات موزعة على 4 أقسام قابلة لإعادة التسمية، مع غلاف وفهرس وصفحة بيانات المتجر.، 20 قالب وصف عربي وإنجليزي للهدايا والأدوات المنزلية والإكسسوارات، بوصف مستهدف من 30–50 كلمة لكل لغة.، 20 مثالًا مكتملًا بالعربية والإنجليزية لمنتجات افتراضية، مع فصل الأمثلة عن بيانات المتجر الفعلية.، 20 صيغة رد ثنائية اللغة للأسئلة المتكررة، و6 قوالب رسائل ثنائية اللغة لإرسال الكتالوج ومشاركة تحديثاته؛ يرسلها المتجر بنفسه.، دليل مصطلحات من 60 مدخلًا عربيًا وإنجليزيًا للخامات والمقاسات والألوان وحقول المنتجات، دون ادعاءات جودة أو سلامة.، تعليمات تجهيز الكتالوج وتصديره، وقائمة تحقق من 20 نقطة، وسجل لتوثيق تحديثات المنتجات.، ترخيص استخدام وتعديل لمتجر واحد، دون الحاجة إلى شراء باقة أخرى، ودون حق إعادة بيع القوالب.</span></li></ul><p style="font-size:13px">السعر النهائي بالدولار الأمريكي ويُدفع عبر PayPal بلا رسوم إضافية من البائع. المبلغ بالريال تقريبي للإيضاح فقط، وقد يطبّق PayPal أو بنكك رسوم تحويل عملة.</p>
+<h3>طريقة التسليم</h3><p>بعد تأكيد الدفع عبر PayPal يصلك المنتج (ملف رقمي) على بريدك المسجّل في PayPal خلال ٢٤ ساعة كحد أقصى.</p><p dir="ltr" lang="en" style="font-size:13px">Digital file delivered to your PayPal email within 24 hours of payment confirmation.</p>
+<h3>سياسة الاسترداد</h3><p>إذا لم يصلك الملف، أو كان تالفًا، أو اختلفت محتوياته جوهريًا عن الباقة المعلنة، أرسل رقم الطلب ووصف المشكلة خلال 7 أيام من الشراء لطلب نسخة سليمة أو استرداد. تُراجع الطلبات يدويًا، وأي استرداد يتطلب اعتماد مالك النشاط قبل تنفيذه عبر وسيلة الدفع الأصلية. تغيير الرأي بعد تنزيل ملفات سليمة ومطابقة للوصف لا يتيح استردادًا اختياريًا، مع عدم المساس بأي حقوق إلزامية يقررها النظام المعمول به. لا تطلب إرسال بيانات البطاقة أو كلمة مرور PayPal. مهلة الأيام السبعة لا تُسقط حقوقك القانونية عند وجود عيب أو عدم مطابقة، ولا نفرض الاستبدال بدل الاسترداد متى كان الاسترداد حقًا لك، وإذا منحك قانون بلدك حقوقًا أوسع (مثل حق العدول) فهي محفوظة.</p>
+<h3>البائع والتواصل</h3><p>البائع: سمارت وورك — سجل تجاري قطري رقم 257327 — العنوان: قطر — للتواصل: <a href="mailto:qff.investment@gmail.com">qff.investment@gmail.com</a></p>
+<p><a href="terms.html">شروط البيع</a> · <a href="privacy.html">سياسة الخصوصية</a></p>
+</section><!-- mared:legal:end --><!-- mared:payouts:start --><section dir="rtl" style="text-align:center;padding:32px 16px;margin-top:32px;border-top:1px solid rgba(0,0,0,.08)"><p style="margin:0 0 12px;font-family:system-ui,sans-serif;font-weight:700">ادعم / اشترِ الآن</p><a href="https://paypal.me/MMS71017" target="_blank" rel="noopener" data-mared-payout="paypal" style="display:inline-block;margin:6px;padding:12px 22px;border-radius:12px;background:#e8b44a;color:#1a1408;font-weight:700;text-decoration:none;font-family:system-ui,sans-serif">ادفع عبر PayPal</a></section><!-- mared:payouts:end --></body>
+</html>
