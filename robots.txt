@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qffinvestmentai-crypto.github.io/raffain-catalog-kit/sitemap.xml
